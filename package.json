@@ -41,7 +41,7 @@
     },
     "scripts": {
         "start": "react-app-rewired start",
-        "build": "webpack --mode production --config webpack.config.js --watch",
+        "build": "webpack --mode production --config webpack.config.js",
         "test": "react-app-rewired test",
         "test-coverage": "react-app-rewired test --coverage --collectCoverageFrom='[\"src/**/*.tsx\",\"!src/index.tsx\"]' --watchAll=false --coverageDirectory=output/coverage/jest",
         "eject": "react-app-rewired eject"
