@@ -1,4 +1,5 @@
-const path = require('path');
+const path = require('path'),
+    BrotliPlugin = require('brotli-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -30,6 +31,14 @@ module.exports = {
         },
         extensions: ['.tsx', '.ts', '.js'],
     },
+    plugins: [
+        new BrotliPlugin({
+            asset: '[path].br[query]',
+            test: /\.(js|css|html|svg)$/,
+            threshold: 10240,
+            minRatio: 0.8,
+        }),
+    ],
     optimization: {
         splitChunks: {
             cacheGroups: {
@@ -39,6 +48,9 @@ module.exports = {
                     chunks: 'all',
                 },
             },
+        },
+        runtimeChunk: {
+            name: 'manifest',
         },
     },
     output: {
