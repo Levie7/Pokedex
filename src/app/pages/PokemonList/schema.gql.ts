@@ -13,5 +13,5 @@ export const GET_POKEMONS = gql`
     }
 `;
 
-export const getPokemons = (options: any) =>
+export const GetPokemons = (options: any) =>
     useQuery<{ pokemons: PokemonList }>(GET_POKEMONS, options);

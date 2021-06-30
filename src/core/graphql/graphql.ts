@@ -1,4 +1,4 @@
-import { ApolloClient, ApolloProvider, InMemoryCache, gql, useQuery } from '@apollo/client';
+import { ApolloClient, ApolloProvider, gql, InMemoryCache, useQuery } from '@apollo/client';
 
 export const CLIENT = new ApolloClient({
     uri: 'https://graphql-pokeapi.vercel.app/api/graphql',

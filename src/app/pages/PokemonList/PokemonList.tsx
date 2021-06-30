@@ -14,14 +14,14 @@ import { PokemonTotalChip } from 'src/shared/components/PokemonTotalChip';
 import { KEY_STORAGE } from 'src/shared/storage/storage';
 import { BACKGROUND, FLEX } from 'src/shared/styles';
 
-import { getPokemons } from './schema.gql';
+import { GetPokemons } from './schema.gql';
 import { fetchPokemons } from './pokemonsReducer';
 
 const LIMIT = 20;
 
 export const PokemonList = React.memo<any>(() => {
     let [page, setPage] = React.useState(0);
-    let { error, data, loading, fetchMore } = getPokemons({
+    let { error, data, loading, fetchMore } = GetPokemons({
         variables: {
             limit: LIMIT,
             offset: 0,

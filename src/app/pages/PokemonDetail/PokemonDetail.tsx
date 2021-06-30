@@ -18,11 +18,11 @@ import { COLOR, FLEX } from 'src/shared/styles';
 import { PokemonCatchModal } from './PokemonCatchModal';
 
 import { POKEMON_TYPE_COLOR_MAPPER } from './pokemonTypeColorMapper';
-import { getPokemonDetail } from './schema.gql';
+import { GetPokemonDetail } from './schema.gql';
 
 export const PokemonDetail = React.memo<any>(
     ({ location, match }: RouteComponentProps<{ name: string }>) => {
-        const { loading, error, data } = getPokemonDetail({
+        const { loading, error, data } = GetPokemonDetail({
             variables: {
                 name: match.params.name,
             },
