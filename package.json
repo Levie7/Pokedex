@@ -1,0 +1,76 @@
+{
+    "name": "pokedex",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@apollo/client": "3.3.20",
+        "@emotion/babel-preset-css-prop": "11.2.0",
+        "@emotion/react": "11.4.0",
+        "@reduxjs/toolkit": "1.6.0",
+        "@testing-library/jest-dom": "5.14.1",
+        "@testing-library/react": "11.2.7",
+        "@testing-library/user-event": "12.8.3",
+        "@types/react-router-dom": "5.1.7",
+        "bootstrap": "5.0.2",
+        "customize-cra": "1.0.0",
+        "graphql": "15.5.1",
+        "react": "17.0.2",
+        "react-app-rewired": "2.1.8",
+        "react-dom": "17.0.2",
+        "react-loadable": "5.5.0",
+        "react-redux": "7.2.4",
+        "react-router-dom": "5.2.0",
+        "react-scripts": "4.0.3",
+        "web-vitals": "1.1.2"
+    },
+    "devDependencies": {
+        "@react-mock/localstorage": "0.1.2",
+        "@types/bootstrap": "5.0.16",
+        "@types/react": "17.0.11",
+        "@types/react-dom": "17.0.8",
+        "@types/react-loadable": "5.5.5",
+        "eslint-plugin-prettier": "3.4.0",
+        "mock-apollo-client": "1.1.0",
+        "prettier": "2.3.1",
+        "typescript": "4.3.4"
+    },
+    "scripts": {
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build webpack --config webpack.config.js --watch",
+        "test": "react-app-rewired test",
+        "test-coverage": "react-app-rewired test --coverage --collectCoverageFrom='[\"src/**/*.tsx\",\"!src/index.tsx\"]' --watchAll=false --coverageDirectory=output/coverage/jest",
+        "eject": "react-app-rewired eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "jest": {
+        "coverageReporters": [
+            "text",
+            "lcov"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 100,
+                "functions": 100,
+                "lines": 100,
+                "statements": 100
+            }
+        }
+    }
+}
