@@ -25,14 +25,17 @@
     },
     "devDependencies": {
         "@babel/preset-react": "7.14.5",
+        "@emotion/babel-plugin": "^11.3.0",
         "@react-mock/localstorage": "0.1.2",
         "@types/bootstrap": "5.0.16",
         "@types/react": "17.0.11",
         "@types/react-dom": "17.0.8",
         "@types/react-loadable": "5.5.5",
         "brotli-webpack-plugin": "1.1.0",
+        "emotion-ts-plugin": "^1.1.0",
         "eslint-plugin-prettier": "3.4.0",
         "file-loader": "6.2.0",
+        "html-webpack-plugin": "4.5.2",
         "mock-apollo-client": "1.1.0",
         "prettier": "2.3.1",
         "ts-loader": "8.2.0",
@@ -41,7 +44,7 @@
     },
     "scripts": {
         "start": "react-app-rewired start",
-        "build": "webpack --mode production --config webpack.config.js",
+        "build": "react-app-rewired build webpack --mode production --config webpack.config.js",
         "test": "react-app-rewired test",
         "test-coverage": "react-app-rewired test --coverage --collectCoverageFrom='[\"src/**/*.tsx\",\"!src/index.tsx\"]' --watchAll=false --coverageDirectory=output/coverage/jest",
         "eject": "react-app-rewired eject"

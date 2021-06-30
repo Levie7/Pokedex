@@ -1,5 +1,6 @@
 const path = require('path'),
-    BrotliPlugin = require('brotli-webpack-plugin');
+    BrotliPlugin = require('brotli-webpack-plugin'),
+    HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -32,6 +33,10 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Pokedex App',
+            template: path.resolve(__dirname, 'public/index.html'),
+        }),
         new BrotliPlugin({
             asset: '[path].br[query]',
             test: /\.(js|css|html|svg)$/,
@@ -55,6 +60,6 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'build/client'),
+        path: path.resolve(__dirname, 'build'),
     },
 };
