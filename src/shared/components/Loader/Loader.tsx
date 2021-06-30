@@ -21,6 +21,9 @@ const LOADER = css`
 
 const LOADER_CONTENT = css`
     margin-top: 60vw;
+    @media only screen and (min-width: 1000px) {
+        margin-top: 20vw;
+    }
 `;
 
 export const Loader = React.memo(() => (

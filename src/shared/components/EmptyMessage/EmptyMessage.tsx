@@ -17,6 +17,9 @@ export const EmptyMessage = React.memo<EmptyMessageProps>(({ message }) => (
             text-align: center;
             position: relative;
             top: 40vw;
+            @media only screen and (min-width: 1000px) {
+                top: 20vw;
+            }
         `}
         data-testid='EmptyMessageComponent'
     >
