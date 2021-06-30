@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "rootDir": "src",
     "jsxImportSource": "@emotion/react",
-    "noEmit": false
+    "noEmit": true
   },
   "include": [
     "./src/**/*"

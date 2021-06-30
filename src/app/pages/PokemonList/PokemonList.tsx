@@ -17,7 +17,7 @@ import { BACKGROUND, FLEX } from 'src/shared/styles';
 import { GetPokemons } from './schema.gql';
 import { fetchPokemons } from './pokemonsReducer';
 
-const LIMIT = 10;
+const LIMIT = 20;
 
 export const PokemonList = React.memo<any>(() => {
     let [page, setPage] = React.useState(0);
